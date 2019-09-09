@@ -15,7 +15,7 @@ namespace Menu.Entrees
 
         public uint Calories { get; set; }
 
-        public List<string> Ingredients
+        public List<string> //Ingredients
         {
 
         }
