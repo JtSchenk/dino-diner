@@ -29,7 +29,7 @@ namespace DinoDiner.Menu.Entrees
         public VelociWrap()
         {
             this.Calories = 356;
-            this.Price = 8.45;
+            this.Price = 6.86;
         }
 
         public void HoldDressing()
