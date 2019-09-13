@@ -14,7 +14,7 @@ namespace DinoDiner.Menu.Entrees
         {
             get
             {
-                List<string> ingredients = new List<string>() { "Chicken@Wing Sauce" };
+                List<string> ingredients = new List<string>() { "Chicken", "Wing Sauce" };
                 return ingredients;
             }
             
