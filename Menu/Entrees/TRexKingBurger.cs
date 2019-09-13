@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Menu.Entrees
+namespace DinoDiner.Menu.Entrees
 {
     public class TRexKingBurger
     {
@@ -77,7 +77,7 @@ namespace Menu.Entrees
             this.mustard = false;
         }
 
-        public void Mayo()
+        public void HoldMayo()
         {
             this.mayo = false;
         }

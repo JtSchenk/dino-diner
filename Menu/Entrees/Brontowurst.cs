@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Menu
+namespace DinoDiner.Menu.Entrees
 {
     public class Brontowurst
     {
@@ -35,7 +35,7 @@ namespace Menu
             this.Calories = 498;
         }
 
-        public void HoldWholeWheatBun()
+        public void HoldBun()
         {
             this.wholewheatbun = false;
         }
@@ -45,7 +45,7 @@ namespace Menu
             this.peppers = false;
         }
 
-        public void HoldOnions()
+        public void HoldOnion()
         {
             this.onions = false;
         }

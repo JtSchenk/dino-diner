@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Menu.Entrees
+namespace DinoDiner.Menu.Entrees
 {
     public class DinoNuggets
     {
@@ -17,7 +17,7 @@ namespace Menu.Entrees
         {
             get
             {
-                List<string> ingredients = new List<string>();
+                List<string> ingredients = new List<string> { "Chicken Nugget", "Chicken Nugget", "Chicken Nugget", "Chicken Nugget", "Chicken Nugget" };
                 return ingredients;
             }
         }
@@ -26,6 +26,11 @@ namespace Menu.Entrees
         {
             this.Calories = 612;
             this.Price = 5.15;
+        }
+
+        public void AddNugget()
+        {
+
         }
     }
 

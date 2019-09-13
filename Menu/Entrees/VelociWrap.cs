@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Menu.Entrees
+namespace DinoDiner.Menu.Entrees
 {
     public class VelociWrap
     {
@@ -42,7 +42,7 @@ namespace Menu.Entrees
             this.lettuce = false;
         }
 
-        public void HoldCheese()
+        public void holdCheese()
         {
             this.cheese = false;
         }
