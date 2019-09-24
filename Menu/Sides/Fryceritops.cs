@@ -44,4 +44,3 @@ namespace DinoDiner.Menu.Sides
         }
     }
 }
-}
