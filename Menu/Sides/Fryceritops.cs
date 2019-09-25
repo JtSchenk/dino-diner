@@ -15,7 +15,7 @@ namespace DinoDiner.Menu.Sides
             }
             set
             {
-                Size size = value;
+                size = value;
                 switch (size)
                 {
                     case Size.Small:
@@ -38,7 +38,7 @@ namespace DinoDiner.Menu.Sides
         {
             Price = 0.99;
             Calories = 222;
-            Ingredients.Add("Potatoes");
+            Ingredients.Add("Potato");
             Ingredients.Add("Salt");
             Ingredients.Add("Vegetable Oil");
         }

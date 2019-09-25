@@ -15,7 +15,7 @@ namespace DinoDiner.Menu.Sides
             }
             set
             {
-                Size size = value;
+                size = value;
                 switch (size)
                 {
                     case Size.Small:

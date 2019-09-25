@@ -15,7 +15,7 @@ namespace DinoDiner.Menu.Sides
             }
             set
             {
-                Size size = value;
+                size = value;
                 switch (size)
                 {
                     case Size.Small:
@@ -38,8 +38,8 @@ namespace DinoDiner.Menu.Sides
             Price = 0.99;
             Calories = 352;
             Ingredients.Add("Potato");
-            Ingredients.Add("Breading");
-            Ingredients.Add("Vegetable Oil");
+            Ingredients.Add("Salt");
+            Ingredients.Add("Vegetable Oil");        
         }
     }
 }
