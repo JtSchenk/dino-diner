@@ -12,6 +12,7 @@ namespace DinoDiner.Menu.Sides
         Large
     }
 
+
     public abstract class Side
     {
         /// <summary>
@@ -19,15 +20,13 @@ namespace DinoDiner.Menu.Sides
         /// </summary>
         public double Price { get; set; }
 
+        protected List<string> ingredients = new List<string>();
+        public virtual List<string> Ingredients { get { return ingredients; } }
+
         /// <summary>
         /// Gets and sets the calories
         /// </summary>
         public uint Calories { get; set; }
-
-        /// <summary>
-        /// Gets the ingredients list
-        /// </summary>
-        public List<string> Ingredients { get; }
 
         /// <summary>
         /// Gets or sets the size

@@ -22,6 +22,7 @@ namespace DinoDiner.Menu.Drinks
             set
             {
                 size = value;
+                // set the prices for small and large
                 if (size == Size.Medium)
                 {
                     Price = 2.00;

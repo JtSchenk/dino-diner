@@ -11,7 +11,7 @@ namespace DinoDiner.Menu.Entrees
 
         public uint Calories { get; set; }
 
-        public List<string> Ingredients { get { return ingredients; } }
+        public virtual List<string> Ingredients { get { return ingredients; } }
 
     }
 }

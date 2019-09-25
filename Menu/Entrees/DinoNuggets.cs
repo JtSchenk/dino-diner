@@ -4,16 +4,11 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class DinoNuggets
+    public class DinoNuggets : Entree
     {
         private uint extranugget = 0;
         
-
-        public uint Calories { get; set; }
-
-        public double Price { get; set; }
-
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
@@ -30,13 +25,14 @@ namespace DinoDiner.Menu.Entrees
         {
             this.Calories = 354;
             this.Price = 4.25;
+            
         }
 
         public void AddNugget()
         {
             extranugget++;
-            this.Calories = Calories + extranugget * 59;
-            this.Price = Price + extranugget * 0.25;
+            this.Calories = Calories + 59;
+            this.Price = Price + 0.25;
         }
     }
 
