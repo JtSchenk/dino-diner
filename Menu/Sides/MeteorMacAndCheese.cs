@@ -6,7 +6,15 @@ namespace DinoDiner.Menu.Sides
 {
     public class MeteorMacAndCheese : Side
     {
+        /// <summary>
+        /// Protected variable size inherited from the Size class.
+        /// </summary>
         protected Size size;
+
+        /// <summary>
+        /// This method gets and returns the size and then sets the cases for if the size is small, medium, or large
+        /// and then sets the prices and calories depending on the size.
+        /// </summary>
         public override Size Size
         {
             get
@@ -34,6 +42,9 @@ namespace DinoDiner.Menu.Sides
             }
         }
 
+        /// <summary>
+        /// This method initiliazes the price, calories, and ingredients for the MeteorMacAndCheese.
+        /// </summary>
         public MeteorMacAndCheese()
         {
             Price = 0.99;

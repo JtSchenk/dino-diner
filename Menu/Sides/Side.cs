@@ -4,7 +4,9 @@ using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
-
+    /// <summary>
+    /// This public enum sets the Size to either small, medium, or large
+    /// </summary>
     public enum Size
     {
         Small,
@@ -12,7 +14,9 @@ namespace DinoDiner.Menu.Sides
         Large
     }
 
-
+    /// <summary>
+    /// This public abstract method is a base for a bunch of sub classes.
+    /// </summary>
     public abstract class Side
     {
         /// <summary>
@@ -20,7 +24,13 @@ namespace DinoDiner.Menu.Sides
         /// </summary>
         public double Price { get; set; }
 
+        /// <summary>
+        /// Creates a new list of ingredients
+        /// </summary>
         protected List<string> ingredients = new List<string>();
+        /// <summary>
+        /// Gets and returns the ingredients into the list of ingredients.
+        /// </summary>
         public virtual List<string> Ingredients { get { return ingredients; } }
 
         /// <summary>

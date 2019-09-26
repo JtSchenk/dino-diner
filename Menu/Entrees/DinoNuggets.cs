@@ -6,8 +6,14 @@ namespace DinoDiner.Menu.Entrees
 {
     public class DinoNuggets : Entree
     {
+        /// <summary>
+        /// Variable that represents how many extra nuggets have been added.
+        /// </summary>
         private uint extranugget = 0;
         
+        /// <summary>
+        /// public variable that shows how many ingredients there are. EX: how many chicken nuggets there are.
+        /// </summary>
         public override List<string> Ingredients
         {
             get
@@ -21,6 +27,9 @@ namespace DinoDiner.Menu.Entrees
             }
         }
 
+        /// <summary>
+        /// This initiliazes the Nuggets to have a price of 4.25 and calories to 354.
+        /// </summary>
         public DinoNuggets()
         {
             this.Calories = 354;
@@ -28,6 +37,9 @@ namespace DinoDiner.Menu.Entrees
             
         }
 
+        /// <summary>
+        /// Method for adding a nugget if the user wants x amount of nuggets.
+        /// </summary>
         public void AddNugget()
         {
             extranugget++;
