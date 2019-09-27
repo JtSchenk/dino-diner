@@ -4,15 +4,6 @@ using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
-    /// <summary>
-    /// This public enum sets the Size to either small, medium, or large
-    /// </summary>
-    public enum Size
-    {
-        Small,
-        Medium, 
-        Large
-    }
 
     /// <summary>
     /// This public abstract method is a base for a bunch of sub classes.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DinoDiner.Menu.Drinks
 {
-    public class Sodasaurus
+    public class Sodasaurus : Drink
     {
         private SodasaurusFlavor flavor;
         public SodasaurusFlavor Flavor
