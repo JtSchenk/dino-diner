@@ -28,12 +28,12 @@ namespace DinoDiner.Menu.Drinks
                     Price = 1.50;
                     Calories = 112;
                 }
-                if (size == Size.Medium)
+                else if (size == Size.Medium)
                 {
                     Price = 2.00;
                     Calories = 156;
                 }
-                if (size == Size.Large)
+                else if (size == Size.Large)
                 {
                     Price = 2.50;
                     Calories = 208;
@@ -44,9 +44,9 @@ namespace DinoDiner.Menu.Drinks
         public Sodasaurus()
         {
             Price = 1.50;
-            Calories = 156;
+            Calories = 112;
             ingredients.Add("Water");
-            ingredients.Add("Natural Flavor");
+            ingredients.Add("Natural Flavors");
             ingredients.Add("Cane Sugar");
         }
         // ingredients are Water, Natural Flavors, Cane Sugar

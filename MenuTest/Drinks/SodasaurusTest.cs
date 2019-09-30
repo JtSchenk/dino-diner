@@ -128,6 +128,8 @@ namespace MenuTest.Drinks
         public void ShouldUseCorrectPriceForSmall()
         {
             Sodasaurus soda = new Sodasaurus();
+            soda.Size = Size.Large;
+            soda.Size = Size.Small;
             Assert.Equal<double>(1.50, soda.Price);
         }
 
@@ -135,6 +137,7 @@ namespace MenuTest.Drinks
         public void ShouldUseCorrectPriceForMedium()
         {
             Sodasaurus soda = new Sodasaurus();
+            soda.Size = Size.Medium;
             Assert.Equal<double>(2.00, soda.Price);
         }
 
@@ -142,6 +145,7 @@ namespace MenuTest.Drinks
         public void ShouldUseCorrectPriceForLarge()
         {
             Sodasaurus soda = new Sodasaurus();
+            soda.Size = Size.Large;
             Assert.Equal<double>(2.50, soda.Price);
         }
 
@@ -149,6 +153,8 @@ namespace MenuTest.Drinks
         public void ShouldUseCorrectCaloriesForSmall()
         {
             Sodasaurus soda = new Sodasaurus();
+            soda.Size = Size.Medium;
+            soda.Size = Size.Small;
             Assert.Equal<uint>(112, soda.Calories);
         }
 
@@ -156,6 +162,7 @@ namespace MenuTest.Drinks
         public void ShouldUseCorrectCaloriesForMedium()
         {
             Sodasaurus soda = new Sodasaurus();
+            soda.Size = Size.Medium;
             Assert.Equal<uint>(156, soda.Calories);
         }
 
@@ -163,6 +170,7 @@ namespace MenuTest.Drinks
         public void ShouldUseCorrectCaloriesForLarge()
         {
             Sodasaurus soda = new Sodasaurus();
+            soda.Size = Size.Large;
             Assert.Equal<uint>(208, soda.Calories);
         }
 
@@ -170,7 +178,8 @@ namespace MenuTest.Drinks
         public void ShouldHoldIce()
         {
             Sodasaurus soda = new Sodasaurus();
-            // HoldIce();
+            soda.HoldIce();
+            Assert.False(soda.Ice);
         }
 
         [Fact]
