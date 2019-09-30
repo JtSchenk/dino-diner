@@ -22,16 +22,29 @@ namespace DinoDiner.Menu.Drinks
                 {
                     Price = 0.99;
                     Calories = 8;
+                    if (sweet)
+                    {
+                        Calories = Calories * 2;
+                    }
                 }
                 if (size == Size.Medium)
                 {
                     Price = 1.49;
                     Calories = 16;
+
+                    if (sweet)
+                    {
+                        Calories = Calories * 2;
+                    }
                 }
                 if (size == Size.Large)
                 {
                     Price = 1.99;
                     Calories = 32;
+                    if (sweet)
+                    {
+                        Calories = Calories * 2;
+                    }
                 }
             }
         }
@@ -43,6 +56,23 @@ namespace DinoDiner.Menu.Drinks
             {
                 ingredients.Add("Lemon");
             }
+        }
+
+        public void AddCaneSugar()
+        {
+            sweet = true;
+            if (sweet)
+            {
+                ingredients.Add("Cane Sugar");
+            }
+        }
+
+        public Tyrannotea()
+        {
+            Price = 0.99;
+            Calories = 8;
+            ingredients.Add("Water");
+            ingredients.Add("Tea");
         }
     }
 }
