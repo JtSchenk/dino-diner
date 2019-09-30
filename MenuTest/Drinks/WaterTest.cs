@@ -81,6 +81,7 @@ namespace MenuTest.Drinks
 
         }
 
+        [Fact]
         public void ShouldHaveCorrectIngredients()
         {
 
