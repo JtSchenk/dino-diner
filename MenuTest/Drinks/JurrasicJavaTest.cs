@@ -98,6 +98,8 @@ namespace MenuTest.Drinks
         public void ShouldAddIce()
         {
             JurrasicJava java = new JurrasicJava();
+            java.AddIce();
+            Assert.True(java.Ice);
         }
 
         [Fact]

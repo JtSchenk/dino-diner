@@ -6,7 +6,15 @@ namespace DinoDiner.Menu.Drinks
 {
     public abstract class Drink
     {
-        private bool ice { get; set; }
+        protected bool ice = true;
+        public virtual bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+            }
+        }
         /// <summary>
         /// protected variable that creates a new list of ingredients
         /// </summary>

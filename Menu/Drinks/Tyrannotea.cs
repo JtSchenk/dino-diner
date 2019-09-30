@@ -6,9 +6,12 @@ namespace DinoDiner.Menu.Drinks
 {
     public class Tyrannotea : Drink
     {
-        private bool sweet { get; set; } = false;
 
-        private bool lemon { get; set; } = false;
+        public bool sweet { get; set; } = false;
+
+        public bool lemon { get; set; } = false;
+
+        public override bool Ice { get; set; } = false;
 
         private Size size;
         public override Size Size

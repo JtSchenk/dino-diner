@@ -6,6 +6,7 @@ namespace DinoDiner.Menu.Drinks
 {
     public class Sodasaurus : Drink
     {
+        
         private SodasaurusFlavor flavor;
         public SodasaurusFlavor Flavor
         {
@@ -50,8 +51,6 @@ namespace DinoDiner.Menu.Drinks
             ingredients.Add("Cane Sugar");
         }
         // ingredients are Water, Natural Flavors, Cane Sugar
-
-        public bool Ice { get; set; } = true;
-
+       
     }
 }

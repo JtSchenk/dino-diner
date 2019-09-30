@@ -12,13 +12,15 @@ namespace MenuTest.Drinks
         [Fact]
         public void ShouldHaveDefaultPrice()
         {
-
+            Water wat = new Water();
+            Assert.Equal<double>(0.00, wat.Price);
         }
 
         [Fact]
         public void ShouldHaveDefaultCalories()
         {
-
+            Water wat = new Water();
+            Assert.Equal<uint>(0, wat.Calories);
         }
 
         [Fact]
