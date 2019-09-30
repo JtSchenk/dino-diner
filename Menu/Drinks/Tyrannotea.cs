@@ -6,9 +6,9 @@ namespace DinoDiner.Menu.Drinks
 {
     public class Tyrannotea : Drink
     {
-        private bool sweet = false;
+        private bool sweet { get; set; } = false;
 
-        private bool lemon = false;
+        private bool lemon { get; set; } = false;
 
         private Size size;
         public override Size Size
@@ -66,6 +66,8 @@ namespace DinoDiner.Menu.Drinks
                 ingredients.Add("Cane Sugar");
             }
         }
+
+
 
         public Tyrannotea()
         {
