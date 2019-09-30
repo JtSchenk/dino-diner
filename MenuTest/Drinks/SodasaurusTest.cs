@@ -121,7 +121,66 @@ namespace MenuTest.Drinks
         public void ShouldHaveDefaultSize()
         {
             Sodasaurus soda = new Sodasaurus();
-            //Assert.Equal<Size>(Size.Small, size);
+            Assert.Equal<Size>(Size.Small, soda.Size);
+        }
+
+        [Fact]
+        public void ShouldUseCorrectPriceForSmall()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            Assert.Equal<double>(1.50, soda.Price);
+        }
+
+        [Fact]
+        public void ShouldUseCorrectPriceForMedium()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            Assert.Equal<double>(2.00, soda.Price);
+        }
+
+        [Fact]
+        public void ShouldUseCorrectPriceForLarge()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            Assert.Equal<double>(2.50, soda.Price);
+        }
+
+        [Fact]
+        public void ShouldUseCorrectCaloriesForSmall()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            Assert.Equal<uint>(112, soda.Calories);
+        }
+
+        [Fact]
+        public void ShouldUseCorrectCaloriesForMedium()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            Assert.Equal<uint>(156, soda.Calories);
+        }
+
+        [Fact]
+        public void ShouldUseCorrectCaloriesForLarge()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            Assert.Equal<uint>(208, soda.Calories);
+        }
+
+        [Fact]
+        public void ShouldHoldIce()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            // HoldIce();
+        }
+
+        [Fact]
+        public void ShouldHaveCorrectIngredients()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            Assert.Contains<string>("Water", soda.Ingredients);
+            Assert.Contains<string>("Natural Flavors", soda.Ingredients);
+            Assert.Contains<string>("Cane Sugar", soda.Ingredients);
+            // I believe this is correct?
         }
     }
 }

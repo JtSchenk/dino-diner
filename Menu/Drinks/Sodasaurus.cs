@@ -52,5 +52,6 @@ namespace DinoDiner.Menu.Drinks
         // ingredients are Water, Natural Flavors, Cane Sugar
 
         public bool Ice { get; set; } = true;
+
     }
 }
