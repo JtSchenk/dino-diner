@@ -6,7 +6,7 @@ namespace DinoDiner.Menu.Drinks
 {
     public abstract class Drink
     {
-
+        private bool ice { get; set; }
         /// <summary>
         /// protected variable that creates a new list of ingredients
         /// </summary>
@@ -31,5 +31,10 @@ namespace DinoDiner.Menu.Drinks
         /// Gets or sets the size
         /// </summary>
         public abstract Size Size { get; set; }
+
+        public void HoldIce()
+        {
+            ice = false;
+        }
     }
 }
