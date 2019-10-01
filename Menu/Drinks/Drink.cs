@@ -1,12 +1,25 @@
-﻿using System;
+﻿/*
+ * Drink.cs
+ * Author: Jacob Schenkelberg
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu.Drinks
 {
+    /// <summary>
+    /// Base class that other classes inherit from.
+    /// </summary>
     public abstract class Drink
     {
+        /// <summary>
+        /// protected ice variable that is set to true.
+        /// </summary>
         protected bool ice = true;
+        /// <summary>
+        /// Gets and sets the ice value.
+        /// </summary>
         public virtual bool Ice
         {
             get { return ice; }
@@ -16,8 +29,14 @@ namespace DinoDiner.Menu.Drinks
             }
         }
 
+        /// <summary>
+        /// protected lemon variable.
+        /// </summary>
         protected bool lemon = false;
 
+        /// <summary>
+        /// Gets and sets the lemon value.
+        /// </summary>
         public virtual bool Lemon
         {
             get { return lemon; }
@@ -51,6 +70,9 @@ namespace DinoDiner.Menu.Drinks
         /// </summary>
         public abstract Size Size { get; set; }
 
+        /// <summary>
+        /// Method for Holding the Ice.
+        /// </summary>
         public void HoldIce()
         {
             ice = false;

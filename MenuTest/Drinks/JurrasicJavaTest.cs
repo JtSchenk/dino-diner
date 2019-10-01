@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * JurrasicJavaTest.cs
+ * Author: Jacob Schenkelberg
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu.Drinks;
@@ -9,6 +13,9 @@ namespace MenuTest.Drinks
 {
     public class JurrasicJavaTest
     {
+        /// <summary>
+        /// Checks to see if the Default Price is correct.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectDefaultPrice()
         {
@@ -16,6 +23,9 @@ namespace MenuTest.Drinks
            Assert.Equal<double>(0.59, java.Price);
         }
 
+        /// <summary>
+        /// Checks to see if the default calories is correct.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectDefaultCalories()
         {
@@ -23,6 +33,9 @@ namespace MenuTest.Drinks
             Assert.Equal<uint>(2, java.Calories);
         }
 
+        /// <summary>
+        /// Checks to see if the default ice is set to false.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectDefaultIce()
         {
@@ -30,6 +43,9 @@ namespace MenuTest.Drinks
             Assert.False(java.ICE);
         }
 
+        /// <summary>
+        /// Checks to see if the default size is correct. Should be default small.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectDefaultSize()
         {
@@ -37,6 +53,9 @@ namespace MenuTest.Drinks
             Assert.Equal<Size>(Size.Small, java.Size);
         }
 
+        /// <summary>
+        /// Checks to see if the default of lemon is correct. Should be false.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectDefaultLemon()
         {
@@ -44,6 +63,9 @@ namespace MenuTest.Drinks
             Assert.False(java.Lemon);
         }
 
+        /// <summary>
+        /// Checks to see if the Price is correct after setting small.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectPriceAfterSettingSmall()
         {
@@ -53,6 +75,9 @@ namespace MenuTest.Drinks
             Assert.Equal<double>(0.59, java.Price);
         }
 
+        /// <summary>
+        /// Checks to see if the price is correct after setting medium.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectPriceAfterSettingMedium()
         {
@@ -61,6 +86,9 @@ namespace MenuTest.Drinks
             Assert.Equal<double>(0.99, java.Price);
         }
 
+        /// <summary>
+        /// Checks to see if the price is correct after setting large.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectPriceAfterSettingLarge()
         {
@@ -69,6 +97,9 @@ namespace MenuTest.Drinks
             Assert.Equal<double>(1.49, java.Price);
         }
 
+        /// <summary>
+        /// Checks to see if the calories is correct after setting small.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectCaloriesAfterSettingSmall()
         {
@@ -78,6 +109,10 @@ namespace MenuTest.Drinks
             Assert.Equal<uint>(2, java.Calories);
         }
 
+
+        /// <summary>
+        /// Checks to see if the calories is correct after setting medium.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectCaloriesAfterSettingMedium()
         {
@@ -86,6 +121,10 @@ namespace MenuTest.Drinks
             Assert.Equal<uint>(4, java.Calories);
         }
 
+
+        /// <summary>
+        /// Checks to see if the calories is correct after setting large.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectCaloriesAfterSettingLarge()
         {
@@ -94,6 +133,9 @@ namespace MenuTest.Drinks
             Assert.Equal<uint>(8, java.Calories);
         }
 
+        /// <summary>
+        /// Checks to see if Ice is true.
+        /// </summary>
         [Fact]
         public void ShouldAddIce()
         {
@@ -102,6 +144,9 @@ namespace MenuTest.Drinks
             Assert.True(java.Ice);
         }
 
+        /// <summary>
+        /// Checks to see if the LeaveRoomForCream method is correct.
+        /// </summary>
         [Fact]
         public void ShouldLeaveSpaceForCream()
         {
@@ -110,6 +155,9 @@ namespace MenuTest.Drinks
             Assert.True(java.RoomForCream);
         }
 
+        /// <summary>
+        /// Checks to see if the ingredients are correct.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectIngredients()
         {

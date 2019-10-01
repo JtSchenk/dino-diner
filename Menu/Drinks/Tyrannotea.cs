@@ -30,7 +30,6 @@ namespace DinoDiner.Menu.Drinks
         /// </summary>
         private Size size;
 
-
         /// <summary>
         /// This checks and sets the size equal to small, medium, or large and gives them
         /// a Price & Calories value.
