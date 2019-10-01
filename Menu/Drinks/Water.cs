@@ -19,10 +19,12 @@ namespace DinoDiner.Menu.Drinks
         /// public variable for iceforwater. Gets, sets, and intially true.
         /// </summary>
         public bool iceforwater { get; set; } = true;
+
         /// <summary>
         /// private backing variable size.
         /// </summary>
         private Size size;
+
         /// <summary>
         /// This checks and sets the size equal to small, medium, or large and gives them
         /// a Price & Calories value.

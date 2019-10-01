@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Tyrannotea.cs
+ * Author: Jacob Schenkelberg
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,14 +10,31 @@ namespace DinoDiner.Menu.Drinks
 {
     public class Tyrannotea : Drink
     {
-
+        /// <summary>
+        /// public variable that sets sweet to false.
+        /// </summary>
         public bool sweet { get; set; } = false;
 
+        /// <summary>
+        /// public variable that sets lemon to false.
+        /// </summary>
         public bool lemon { get; set; } = false;
 
+        /// <summary>
+        /// public variable that sets Ice to false.
+        /// </summary>
         public override bool Ice { get; set; } = false;
 
+        /// <summary>
+        /// private backing variable Size.
+        /// </summary>
         private Size size;
+
+
+        /// <summary>
+        /// This checks and sets the size equal to small, medium, or large and gives them
+        /// a Price & Calories value.
+        /// </summary>
         public override Size Size
         {
             get { return size; }
@@ -52,6 +73,9 @@ namespace DinoDiner.Menu.Drinks
             }
         }
 
+        /// <summary>
+        /// This method adds a lemon.
+        /// </summary>
         public void AddLemon()
         {
             lemon = true;
@@ -61,6 +85,9 @@ namespace DinoDiner.Menu.Drinks
             }
         }
 
+        /// <summary>
+        /// This method adds Cane Sugar.
+        /// </summary>
         public void AddCaneSugar()
         {
             sweet = true;
@@ -70,8 +97,9 @@ namespace DinoDiner.Menu.Drinks
             }
         }
 
-
-
+        /// <summary>
+        /// This method has the default ingredients, Price, and Calories.
+        /// </summary>
         public Tyrannotea()
         {
             Price = 0.99;

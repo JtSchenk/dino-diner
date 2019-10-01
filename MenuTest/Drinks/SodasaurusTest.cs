@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * SodasaurusTest.cs
+ * Author: Jacob Schenkelberg
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu.Drinks;
@@ -7,15 +11,12 @@ using DinoDiner.Menu;
 
 namespace MenuTest.Drinks
 {
-    /*
-     * The ability to set each possible flavor
-       The correct default price, calories, ice, and size
-       The correct price and calories after changing to small, medium, and large sizes.
-       That invoking HoldIce() results in the Ice property being false.
-     */
+ 
     public class SodasaurusTest
     {
-        // The ability to set each possible flavor
+        /// <summary>
+        /// Checks to see if the Flavor is set to Cherry.
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetFlavorToCherry()
         {
@@ -24,6 +25,9 @@ namespace MenuTest.Drinks
             Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.Cherry, soda.Flavor);
         }
 
+        /// <summary>
+        /// Checks to see if the Flavor is set to Cola.
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetFlavorToCola()
         {
@@ -32,6 +36,9 @@ namespace MenuTest.Drinks
             Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.Cola, soda.Flavor);
         }
 
+        /// <summary>
+        /// Checks to see if the Flavor is set to Orange.
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetFlavorToOrange()
         {
@@ -39,6 +46,10 @@ namespace MenuTest.Drinks
             soda.Flavor = SodasaurusFlavor.Orange;
             Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.Orange, soda.Flavor);
         }
+
+        /// <summary>
+        /// Checks to see if the Flavor is set to Vanilla.
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetFlavorToVanilla()
         {
@@ -46,6 +57,10 @@ namespace MenuTest.Drinks
             soda.Flavor = SodasaurusFlavor.Vanilla;
             Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.Vanilla, soda.Flavor);
         }
+
+        /// <summary>
+        /// Checks to see if the Flavor is set to Chocolate.
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetFlavorToChocolate()
         {
@@ -53,6 +68,10 @@ namespace MenuTest.Drinks
             soda.Flavor = SodasaurusFlavor.Chocolate;
             Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.Chocolate, soda.Flavor);
         }
+
+        /// <summary>
+        /// Checks to see if the Flavor is set to Lime.
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetFlavorToLime()
         {
@@ -60,6 +79,10 @@ namespace MenuTest.Drinks
             soda.Flavor = SodasaurusFlavor.Lime;
             Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.Lime, soda.Flavor);
         }
+
+        /// <summary>
+        /// Checks to see if the Flavor is set to RootBeer.
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetFlavorToRootBeer()
         {
@@ -67,7 +90,10 @@ namespace MenuTest.Drinks
             soda.Flavor = SodasaurusFlavor.RootBeer;
             Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.RootBeer, soda.Flavor);
         }
-        // The correct default price, calories, ice, and size
+        
+        /// <summary>
+        /// Checks to see if the default price is correct.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectDefaultPrice()
         {
@@ -75,7 +101,9 @@ namespace MenuTest.Drinks
             Assert.Equal<double>(1.50, soda.Price);
         }
 
-        // The correct price and calories after changing to small, medium, and large
+        /// <summary>
+        /// Checks to see if the Price is correct after setting to small.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectPriceAfterSettingSmall()
         {
@@ -85,6 +113,9 @@ namespace MenuTest.Drinks
             Assert.Equal<double>(1.50, soda.Price);
         }
 
+        /// <summary>
+        /// Checks to see if the Price is correct after setting to medium.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectPriceAfterSettingMedium()
         {
@@ -94,6 +125,9 @@ namespace MenuTest.Drinks
             Assert.Equal<double>(2.00, soda.Price);
         }
 
+        /// <summary>
+        /// Checks to see if the price is correct after setting to large.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectPriceAfterSettingLarge()
         {
@@ -103,6 +137,9 @@ namespace MenuTest.Drinks
             Assert.Equal<double>(2.50, soda.Price);
         }
 
+        /// <summary>
+        /// Checks to make sure there is default ice. (true)
+        /// </summary>
         [Fact]
         public void ShouldHaveDefaultIce()
         {
@@ -110,6 +147,9 @@ namespace MenuTest.Drinks
             Assert.True(soda.Ice);
         }
 
+        /// <summary>
+        /// Checks to see if the class is set to default calories.
+        /// </summary>
         [Fact]
         public void ShouldHaveDefaultCalories()
         {
@@ -117,6 +157,9 @@ namespace MenuTest.Drinks
             Assert.Equal<uint>(112, soda.Calories);
         }
 
+        /// <summary>
+        /// Checks to see if it is set to default size.
+        /// </summary>
         [Fact]
         public void ShouldHaveDefaultSize()
         {
@@ -124,6 +167,9 @@ namespace MenuTest.Drinks
             Assert.Equal<Size>(Size.Small, soda.Size);
         }
 
+        /// <summary>
+        /// Checks to see if the price is correct for small.
+        /// </summary>
         [Fact]
         public void ShouldUseCorrectPriceForSmall()
         {
@@ -133,6 +179,9 @@ namespace MenuTest.Drinks
             Assert.Equal<double>(1.50, soda.Price);
         }
 
+        /// <summary>
+        /// Checks to see if the price is correct for medium.
+        /// </summary>
         [Fact]
         public void ShouldUseCorrectPriceForMedium()
         {
@@ -141,6 +190,9 @@ namespace MenuTest.Drinks
             Assert.Equal<double>(2.00, soda.Price);
         }
 
+        /// <summary>
+        /// Checks to see if the price is correct for large.
+        /// </summary>
         [Fact]
         public void ShouldUseCorrectPriceForLarge()
         {
@@ -149,6 +201,9 @@ namespace MenuTest.Drinks
             Assert.Equal<double>(2.50, soda.Price);
         }
 
+        /// <summary>
+        /// Checks to see if the calories is correct for small.
+        /// </summary>
         [Fact]
         public void ShouldUseCorrectCaloriesForSmall()
         {
@@ -158,6 +213,9 @@ namespace MenuTest.Drinks
             Assert.Equal<uint>(112, soda.Calories);
         }
 
+        /// <summary>
+        /// Checks to see if the calories is correct for medium.
+        /// </summary>
         [Fact]
         public void ShouldUseCorrectCaloriesForMedium()
         {
@@ -166,6 +224,9 @@ namespace MenuTest.Drinks
             Assert.Equal<uint>(156, soda.Calories);
         }
 
+        /// <summary>
+        /// Checks to see if the calories is correct for large.
+        /// </summary>
         [Fact]
         public void ShouldUseCorrectCaloriesForLarge()
         {
@@ -174,6 +235,9 @@ namespace MenuTest.Drinks
             Assert.Equal<uint>(208, soda.Calories);
         }
 
+        /// <summary>
+        /// Checks to see if the HoldIce method sets the Ice to false.
+        /// </summary>
         [Fact]
         public void ShouldHoldIce()
         {
@@ -182,6 +246,9 @@ namespace MenuTest.Drinks
             Assert.False(soda.Ice);
         }
 
+        /// <summary>
+        /// Checks to see if the ingredients are correct.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectIngredients()
         {
@@ -189,7 +256,6 @@ namespace MenuTest.Drinks
             Assert.Contains<string>("Water", soda.Ingredients);
             Assert.Contains<string>("Natural Flavors", soda.Ingredients);
             Assert.Contains<string>("Cane Sugar", soda.Ingredients);
-            // I believe this is correct?
         }
     }
 }

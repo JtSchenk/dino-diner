@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Sodasaurus.cs
+ * Author: Jacob Schenkelberg
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,17 +10,33 @@ namespace DinoDiner.Menu.Drinks
 {
     public class Sodasaurus : Drink
     {
-        
+        /// <summary>
+        /// Private backing variable for flavor
+        /// </summary>
         private SodasaurusFlavor flavor;
+        /// <summary>
+        /// Gets and sets the flavor.
+        /// </summary>
         public SodasaurusFlavor Flavor
         {
             get { return flavor; }
             set { flavor = value; }
         }
 
+        /// <summary>
+        /// Sets the Price to it's default value of 1.5
+        /// </summary>
         public double Price { get; set; } = 1.5;
 
+        /// <summary>
+        /// Private backing variable size.
+        /// </summary>
         private Size size;
+
+        /// <summary>
+        /// This checks and sets the size equal to small, medium, or large and gives them
+        /// a Price & Calories value.
+        /// </summary>
         public override Size Size
         {
             get { return size; }
@@ -42,6 +62,9 @@ namespace DinoDiner.Menu.Drinks
             }
         }
 
+        /// <summary>
+        /// Initiliazes the Sodasaurus class to have a default Price, Calories, and ingredients.
+        /// </summary>
         public Sodasaurus()
         {
             Price = 1.50;
@@ -50,7 +73,6 @@ namespace DinoDiner.Menu.Drinks
             ingredients.Add("Natural Flavors");
             ingredients.Add("Cane Sugar");
         }
-        // ingredients are Water, Natural Flavors, Cane Sugar
        
     }
 }
