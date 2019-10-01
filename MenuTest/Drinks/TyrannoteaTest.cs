@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * TyrannoteaTest.cs
+ * Author: Jacob Schenkelberg
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu.Drinks;
@@ -9,6 +13,9 @@ namespace MenuTest.Drinks
 {
     public class TyrannoteaTest
     {
+        /// <summary>
+        /// Checks to see if default price is correct.
+        /// </summary>
         [Fact]
         public void ShouldHaveDefaultPrice()
         {
@@ -16,6 +23,9 @@ namespace MenuTest.Drinks
             Assert.Equal<double>(0.99, tea.Price);
         }
 
+        /// <summary>
+        /// Checks to see if default calories is correct.
+        /// </summary>
         [Fact]
         public void ShouldHaveDefaultCalories()
         {
@@ -23,6 +33,9 @@ namespace MenuTest.Drinks
             Assert.Equal<uint>(8, tea.Calories);
         }
 
+        /// <summary>
+        /// Checks to see if default ice is correct.
+        /// </summary>
         [Fact]
         public void ShouldHaveDefaultIce()
         {
@@ -30,6 +43,9 @@ namespace MenuTest.Drinks
             Assert.False(tea.Ice);
         }
 
+        /// <summary>
+        /// Checks to see if default lemon is false.
+        /// </summary>
         [Fact]
         public void ShouldHaveDefaultLemon()
         {
@@ -37,6 +53,9 @@ namespace MenuTest.Drinks
             Assert.False(tea.lemon);
         }
 
+        /// <summary>
+        /// Checks to see if default sweet is false.
+        /// </summary>
         [Fact]
         public void ShouldHaveDefaultSweet()
         {
@@ -44,6 +63,9 @@ namespace MenuTest.Drinks
             Assert.False(tea.sweet);
         }
 
+        /// <summary>
+        /// Checks to see if price is correct after setting small.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectPriceAfterSettingSmall()
         {
@@ -53,6 +75,9 @@ namespace MenuTest.Drinks
             Assert.Equal<double>(0.99, tea.Price);
         }
 
+        /// <summary>
+        /// Checks to see if price is correct after setting medium.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectPriceAfterSettingMedium()
         {
@@ -61,6 +86,9 @@ namespace MenuTest.Drinks
             Assert.Equal<double>(1.49, tea.Price);
         }
 
+        /// <summary>
+        /// Checks to see if price is correct after setting large.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectPriceAfterSettingLarge()
         {
@@ -69,6 +97,9 @@ namespace MenuTest.Drinks
             Assert.Equal<double>(1.99, tea.Price);
         }
 
+        /// <summary>
+        /// Checks to see if calories is correct after setting small.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectCaloriesAfterSettingSmall()
         {
@@ -78,6 +109,9 @@ namespace MenuTest.Drinks
             Assert.Equal<uint>(8, tea.Calories);
         }
 
+        /// <summary>
+        /// Checks to see if calories is correct after setting medium.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectCaloriesAfterSettingMedium()
         {
@@ -86,6 +120,9 @@ namespace MenuTest.Drinks
             Assert.Equal<uint>(16, tea.Calories);
         }
 
+        /// <summary>
+        /// Checks to see if calories is correct after setting large.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectCaloriesAfterSettingLarge()
         {
@@ -94,6 +131,9 @@ namespace MenuTest.Drinks
             Assert.Equal<uint>(32, tea.Calories);
         }
 
+        /// <summary>
+        /// Checks to see if the ice value is false after invoking HoldIce().
+        /// </summary>
         [Fact]
         public void ShouldHoldIce()
         {
@@ -102,27 +142,40 @@ namespace MenuTest.Drinks
             Assert.False(tea.Ice);
         }
 
+        /// <summary>
+        /// Checks to see if the lemon was added correctly.
+        /// </summary>
         [Fact]
         public void ShouldAddLemon()
         {
             Tyrannotea tea = new Tyrannotea();
             tea.AddLemon();
-            Assert.True(tea.Ice);
+            Assert.True(tea.lemon);
         }
 
+        /// <summary>
+        /// Checks to see if the sweet value was set to true.
+        /// </summary>
         [Fact]
         public void ShouldSetSweetPropertyToTrue()
         {
             Tyrannotea tea = new Tyrannotea();
-            //
+            tea.AddCaneSugar();
+            Assert.True(tea.sweet);
         }
 
+        /// <summary>
+        /// Checks to see if the calories after setting sweet to true are correct.
+        /// </summary>
         [Fact]
         public void ShouldResultInCorrectCaloriesAfterSettingSweetFromTrueToFalse()
         {
 
         }
 
+        /// <summary>
+        /// Checks to see if the ingredients are correct.
+        /// </summary>
         [Fact]
         public void ShouldHaveCorrectIngredients()
         {
