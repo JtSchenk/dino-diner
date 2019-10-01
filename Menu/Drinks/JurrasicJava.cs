@@ -6,11 +6,11 @@ namespace DinoDiner.Menu.Drinks
 {
     public class JurrasicJava : Drink
     {
-        private bool ICE { get; set; } = false;
+        public bool ICE { get; set; } = false;
 
-        private bool RoomForCream { get; set; } = false;
+        public bool RoomForCream { get; set; } = false;
 
-        private bool Decaf { get; set; } = false;
+        public bool Decaf { get; set; } = false;
 
         private Size size;
         public override Size Size

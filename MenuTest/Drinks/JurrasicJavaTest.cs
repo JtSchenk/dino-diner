@@ -27,7 +27,7 @@ namespace MenuTest.Drinks
         public void ShouldHaveCorrectDefaultIce()
         {
             JurrasicJava java = new JurrasicJava();
-            //
+            Assert.False(java.ICE);
         }
 
         [Fact]
@@ -41,7 +41,7 @@ namespace MenuTest.Drinks
         public void ShouldHaveCorrectDefaultLemon()
         {
             JurrasicJava java = new JurrasicJava();
-            //
+            Assert.False(java.Lemon);
         }
 
         [Fact]
@@ -106,12 +106,16 @@ namespace MenuTest.Drinks
         public void ShouldLeaveSpaceForCream()
         {
             JurrasicJava java = new JurrasicJava();
+            java.LeaveRoomForCream();
+            Assert.True(java.RoomForCream);
         }
 
         [Fact]
         public void ShouldHaveCorrectIngredients()
         {
             JurrasicJava java = new JurrasicJava();
+            Assert.Contains<string>("Water", java.Ingredients);
+            Assert.Contains<string>("Coffee", java.Ingredients);
         }
     }
 }

@@ -15,6 +15,17 @@ namespace DinoDiner.Menu.Drinks
                 ice = value;
             }
         }
+
+        protected bool lemon = false;
+
+        public virtual bool Lemon
+        {
+            get { return lemon; }
+            set
+            {
+                lemon = value;
+            }
+        }
         /// <summary>
         /// protected variable that creates a new list of ingredients
         /// </summary>

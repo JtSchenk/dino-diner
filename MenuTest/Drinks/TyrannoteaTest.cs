@@ -41,6 +41,7 @@ namespace MenuTest.Drinks
         public void ShouldHaveDefaultSweet()
         {
             Tyrannotea tea = new Tyrannotea();
+            Assert.False(tea.sweet);
         }
 
         [Fact]
