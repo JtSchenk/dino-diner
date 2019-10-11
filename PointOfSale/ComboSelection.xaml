@@ -14,8 +14,18 @@
                 <Setter Property="MinHeight" Value="140"/>
             </Style>
         </WrapPanel.Resources>
-        <Button Width="140" Height="140">Brontowurst Combo</Button>
-        <Button>Dino-Nuggets Combo</Button>
+        <Button Width="140" Height="140">
+            <StackPanel>
+                <Image Width="100" Source="Assets/Brontowurst.png"/>
+                <TextBlock>Brontowurst Combo</TextBlock>
+            </StackPanel>
+        </Button>
+        <Button VerticalContentAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/Brontowurst.png"/>
+            </Button.Background>
+            Dino-Nuggets Combo
+        </Button>
         <Button>Steakosaurus Comobo</Button>
         <Button>TRexKingBurger Combo</Button>
         <Button>Prehistoric PB&amp;J Combo</Button>
