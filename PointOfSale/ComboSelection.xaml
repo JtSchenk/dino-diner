@@ -20,11 +20,18 @@
                 <TextBlock>Brontowurst Combo</TextBlock>
             </StackPanel>
         </Button>
-        <Button VerticalContentAlignment="Top">
-            <Button.Background>
+        <Button VerticalAlignment="Top" Width="140" Height="140">
+            <StackPanel>
+                <Image Width="100" Height ="100" Source="Assets/DinoNuggets.jpg"/>
+                <TextBlock>Dino-Nuggets</TextBlock>
+            </StackPanel>
+            <!--<Button.Background>
                 <ImageBrush ImageSource="Assets/Brontowurst.png"/>
             </Button.Background>
             Dino-Nuggets Combo
+            -->
+            
+            
         </Button>
         <Button>Steakosaurus Comobo</Button>
         <Button>TRexKingBurger Combo</Button>
