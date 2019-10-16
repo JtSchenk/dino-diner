@@ -58,6 +58,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DrinkSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EntreeSelection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -72,6 +76,9 @@
     </Compile>
     <Compile Include="ComboSelection.xaml.cs">
       <DependentUpon>ComboSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrinkSelection.xaml.cs">
+      <DependentUpon>DrinkSelection.xaml</DependentUpon>
     </Compile>
     <Compile Include="EntreeSelection.xaml.cs">
       <DependentUpon>EntreeSelection.xaml</DependentUpon>
@@ -126,6 +133,14 @@
     <Resource Include="Assets\Steakosaurus.png" />
     <Resource Include="Assets\TRexKingBurger.jpg" />
     <Resource Include="Assets\VelociWrap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Sodasaurus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\JurassicJava.jpg" />
+    <Resource Include="Assets\TyrannoTea.jpg" />
+    <Resource Include="Assets\Water.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
