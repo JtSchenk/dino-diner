@@ -10,8 +10,8 @@
     <WrapPanel>
         <WrapPanel.Resources>
             <Style TargetType="Button">
-                <Setter Property="MinWidth" Value="170"/>
-                <Setter Property="MinHeight" Value="150"/>
+                <Setter Property="MinWidth" Value="140"/>
+                <Setter Property="MinHeight" Value="140"/>
             </Style>
         </WrapPanel.Resources>
         <Button Width="140" Height="140">
@@ -48,7 +48,8 @@
         <Button Width="140" Height="140">
             <StackPanel>
                 <Image Width="100" Source="Assets/Steakosaurus.png"/>
-                <TextBlock>Steakosaurus Burger Combo</TextBlock>
+                <TextBlock>Steakosaurus Burger</TextBlock>
+                <TextBlock TextAlignment="Center">Combo</TextBlock>
             </StackPanel>
         </Button>
         <Button Width="140" Height="140">
