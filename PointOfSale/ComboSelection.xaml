@@ -10,17 +10,17 @@
     <WrapPanel>
         <WrapPanel.Resources>
             <Style TargetType="Button">
-                <Setter Property="MinWidth" Value="140"/>
+                <Setter Property="MinWidth" Value="150"/>
                 <Setter Property="MinHeight" Value="140"/>
             </Style>
         </WrapPanel.Resources>
-        <Button Width="140" Height="140">
+        <Button Click ="CustomizeCombo" Width="140" Height="140">
             <StackPanel>
                 <Image Width="100" Source="Assets/Brontowurst.png"/>
                 <TextBlock>Brontowurst Combo</TextBlock>
             </StackPanel>
         </Button>
-        <Button VerticalAlignment="Top" Width="140" Height="140">
+        <Button Click ="CustomizeCombo" VerticalAlignment="Top" Width="140" Height="140">
             <StackPanel>
                 <Image Width="100" Height ="100" Source="Assets/DinoNuggets.jpg"/>
                 <TextBlock>Dino-Nuggets Combo</TextBlock>
@@ -33,32 +33,32 @@
             
             
         </Button>
-        <Button Width="140" Height="140">
+        <Button Click ="CustomizeCombo" Width="140" Height="140">
             <StackPanel>
                 <Image Width="100" Source="Assets/PrehistoricPBJ.jpg"/>
                 <TextBlock>Prehistoric PB&amp;J Combo</TextBlock>
             </StackPanel>
         </Button>
-        <Button Width="140" Height="140">
+        <Button Click ="CustomizeCombo" Width="140" Height="140">
             <StackPanel>
                 <Image Width="100" Source="Assets/DinoNuggets.jpg"/>
                 <TextBlock>Pterodactly Wings Combo</TextBlock>
             </StackPanel>
         </Button>
-        <Button Width="140" Height="140">
+        <Button Click ="CustomizeCombo" Width="140" Height="140">
             <StackPanel>
                 <Image Width="100" Source="Assets/Steakosaurus.png"/>
                 <TextBlock>Steakosaurus Burger</TextBlock>
                 <TextBlock TextAlignment="Center">Combo</TextBlock>
             </StackPanel>
         </Button>
-        <Button Width="140" Height="140">
+        <Button Click ="CustomizeCombo" Width="140" Height="140">
             <StackPanel>
                 <Image Width="100" Source="Assets/TRexKingBurger.jpg"/>
                 <TextBlock>T-Rex King Burger Combo</TextBlock>
             </StackPanel>
         </Button>
-        <Button Width="140" Height="140">
+        <Button Click ="CustomizeCombo" Width="140" Height="140">
             <StackPanel>
                 <Image Width="100" Source="Assets/VelociWrap.jpg"/>
                 <TextBlock>Veloci-Wrap Combo</TextBlock>

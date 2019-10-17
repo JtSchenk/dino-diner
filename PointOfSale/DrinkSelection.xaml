@@ -59,7 +59,7 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Column="2">
-            <Button Width="140" Height="140">
+            <Button Click ="SelectFlavor" Width="140" Height="140">
                 <StackPanel>
                     <TextBlock>Sweet/Decaf/Flavor</TextBlock>
                 </StackPanel>
