@@ -44,5 +44,10 @@ namespace PointOfSale
         {
             NavigationService.Navigate(new DrinkSelection());
         }
+
+        void SideSelection(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new SideSelection());
+        }
     }
 }

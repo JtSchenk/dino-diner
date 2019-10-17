@@ -18,21 +18,25 @@
             <StackPanel>
                 <Button Width="140" Height="100">
                     <StackPanel>
+                        <Image Width="100" Source="Assets/Fryceritops.jpg"/>
                         <TextBlock HorizontalAlignment="Center">Fryceritops</TextBlock>
                     </StackPanel>
                 </Button>
                 <Button Width="140" Height="100">
                     <StackPanel>
+                        <Image Width="100" Height="60" Source="Assets/MeteorMacAndCheese.jpg"/>
                         <TextBlock HorizontalAlignment="Center">Meteor Mac &amp; Cheese</TextBlock>
                     </StackPanel>
                 </Button>
                 <Button Width="140" Height="100">
                     <StackPanel>
+                        <Image Width="100" Source="Assets/MezzorellaSticks.jpg"/>
                         <TextBlock HorizontalAlignment="Center">Mezzorella Sticks</TextBlock>
                     </StackPanel>
                 </Button>
                 <Button Width="140" Height="100">
                     <StackPanel>
+                        <Image Width="100" Source="Assets/Triceritots.jpg"/>
                         <TextBlock HorizontalAlignment="Center">Triceritots</TextBlock>
                     </StackPanel>
                 </Button>

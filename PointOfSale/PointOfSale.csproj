@@ -164,5 +164,11 @@
     <Resource Include="Assets\TyrannoTea.jpg" />
     <Resource Include="Assets\Water.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Fryceritops.jpg" />
+    <Resource Include="Assets\MeteorMacAndCheese.jpg" />
+    <Resource Include="Assets\MezzorellaSticks.jpg" />
+    <Resource Include="Assets\Triceritots.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
