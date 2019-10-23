@@ -24,5 +24,14 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+
+        private void SelectFryceritops(object sender, RoutedEventArgs args)
+        {
+           if(DataContext is Order order)
+           {
+                order.Items.Add(new Fryceritops());
+
+           }
+        }
     }
 }

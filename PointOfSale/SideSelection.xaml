@@ -16,7 +16,7 @@
 
         <StackPanel Grid.Column="0">
             <StackPanel>
-                <Button Width="140" Height="100">
+                <Button Click ="SelectFryceritops" Width="140" Height="100">
                     <StackPanel>
                         <Image Width="100" Source="Assets/Fryceritops.jpg"/>
                         <TextBlock HorizontalAlignment="Center">Fryceritops</TextBlock>

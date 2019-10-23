@@ -51,6 +51,8 @@ namespace DinoDiner.Menu.Entrees
         public void HoldJelly()
         {
             ingredients.Remove("Jelly");
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
 
         /// <summary>

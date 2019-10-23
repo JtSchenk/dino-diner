@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu.Entrees
 {
@@ -42,6 +43,8 @@ namespace DinoDiner.Menu.Entrees
         public void HoldBun()
         {
             ingredients.Remove("Whole Wheat Bun");
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
 
         /// <summary>
@@ -50,6 +53,8 @@ namespace DinoDiner.Menu.Entrees
         public void HoldPeppers()
         {
             ingredients.Remove("Peppers");
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
 
         /// <summary>
@@ -58,6 +63,40 @@ namespace DinoDiner.Menu.Entrees
         public void HoldOnion()
         {
             ingredients.Remove("Onion");
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
+        }
+
+        public override string ToString()
+        {
+            return "Brontowurst";
+        }
+
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
+
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string();
+                if (!wholewheatbun)
+                {
+                    special.Add("Hold Whole Wheat Bun");
+                }
+                if (!peppers)
+                {
+                    special.Add("Hold Peppers");
+                }
+                if (!onions)
+                {
+                    special.Add("Hold Onions");
+                }
+
+                return special.ToArray();
+            }
         }
     }
 }
