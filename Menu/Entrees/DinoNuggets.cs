@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class DinoNuggets : Entree
+    public class DinoNuggets : Entree, INotifyPropertyChanged
     {
         /// <summary>
         /// Variable that represents how many extra nuggets have been added.
@@ -23,6 +23,8 @@ namespace DinoDiner.Menu.Entrees
                 for (int i = 0; i <= extranugget; i++)
                 {
                     ingredients.Add("Chicken Nugget");
+                    NotifyOfPropertyChanged("Ingredients");
+                    NotifyOfPropertyChanged("Special");
                 }
                 return ingredients;
             }
@@ -46,6 +48,19 @@ namespace DinoDiner.Menu.Entrees
             extranugget++;
             this.Calories = Calories + 59;
             this.Price = Price + 0.25;
+        }
+
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if(extranugget != 0)
+                {
+                    special.Add(extranugget + " Extra Nuggets");
+                }
+                return special.ToArray();
+            }
         }
     }
 

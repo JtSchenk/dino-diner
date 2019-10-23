@@ -8,12 +8,6 @@ namespace DinoDiner.Menu.Entrees
     
     public class Brontowurst : Entree , INotifyPropertyChanged, IOrderItem
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void NotifyOfPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
 
         // private field that intiliates the bun to be true. Later has a method that can change it to false.
         private bool wholewheatbun = true;
@@ -42,6 +36,7 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public void HoldBun()
         {
+            wholewheatbun = false;
             ingredients.Remove("Whole Wheat Bun");
             NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
@@ -52,6 +47,7 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public void HoldPeppers()
         {
+            peppers = false;
             ingredients.Remove("Peppers");
             NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
@@ -62,6 +58,7 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public void HoldOnion()
         {
+            onions = false;
             ingredients.Remove("Onion");
             NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");

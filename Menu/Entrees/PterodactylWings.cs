@@ -5,9 +5,8 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class PterodactylWings : Entree
+    public class PterodactylWings : Entree, INotifyPropertyChanged
     {
-
         /// <summary>
         /// Initiliazes the PterodactlyWings to have a set number of calories, price, and ingredients.
         /// </summary>
@@ -17,6 +16,15 @@ namespace DinoDiner.Menu.Entrees
             this.Price = 7.21;
             ingredients.Add("Chicken");
             ingredients.Add("Wing Sauce");
+        }
+
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string();
+                return special.ToArray();
+            }
         }
     }
 }

@@ -34,5 +34,21 @@ namespace DinoDiner.Menu.Sides
         /// </summary>
         public abstract Size Size { get; set; }
 
+        /*
+        public Size Size
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                Size = value;
+                NotifyPropertyChanged("Size");
+                NotifyPropertyChanged("Description");
+                NotifyPropertyChanged();
+            }
+        }
+        */
     }
 }

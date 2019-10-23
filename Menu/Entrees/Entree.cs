@@ -27,5 +27,12 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public virtual List<string> Ingredients { get { return ingredients; } }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
     }
 }

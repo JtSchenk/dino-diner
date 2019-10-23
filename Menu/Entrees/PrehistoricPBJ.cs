@@ -13,16 +13,6 @@ namespace DinoDiner.Menu.Entrees
         /// Sets the jelly boolean to be true
         /// </summary>
         private bool jelly = true;
-
-        /// <summary>
-        /// An event handler for PropertyChanged events
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void NotifyOfPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
         /// <summary>
         /// Method that initializes the calories, price, and ingredients for the prehistoric PBG.
         /// </summary>
@@ -40,6 +30,7 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public void HoldPeanutButter()
         {
+            peanutButter = false;
             ingredients.Remove("Peanut Butter");
             NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
@@ -50,6 +41,7 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public void HoldJelly()
         {
+            jelly = false;
             ingredients.Remove("Jelly");
             NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
