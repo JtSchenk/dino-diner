@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
-    public class CretaceousCombo : INotifyPropertyChanged
+    public class CretaceousCombo : INotifyPropertyChanged , IOrderItem
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

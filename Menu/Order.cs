@@ -6,5 +6,6 @@ namespace DinoDiner.Menu
 {
     public class Order
     {
+
     }
 }

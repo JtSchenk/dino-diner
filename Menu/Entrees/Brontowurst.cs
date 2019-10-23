@@ -5,9 +5,15 @@ using System.Text;
 namespace DinoDiner.Menu.Entrees
 {
     
-    public class Brontowurst : Entree
+    public class Brontowurst : Entree , INotifyPropertyChanged, IOrderItem
     {
-        
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         // private field that intiliates the bun to be true. Later has a method that can change it to false.
         private bool wholewheatbun = true;
 
