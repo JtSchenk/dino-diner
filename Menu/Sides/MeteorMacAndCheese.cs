@@ -30,14 +30,26 @@ namespace DinoDiner.Menu.Sides
                     case Size.Small:
                         Price = 0.99;
                         Calories = 420;
+                        NotifyOfPropertyChanged("Size");
+                        NotifyOfPropertyChanged("Special");
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
                         break;
                     case Size.Medium:
                         Price = 1.45;
                         Calories = 490;
+                        NotifyOfPropertyChanged("Size");
+                        NotifyOfPropertyChanged("Special");
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
                         break;
                     case Size.Large:
                         Price = 1.95;
                         Calories = 520;
+                        NotifyOfPropertyChanged("Size");
+                        NotifyOfPropertyChanged("Special");
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
                         break;
                 }
             }
@@ -53,6 +65,25 @@ namespace DinoDiner.Menu.Sides
             Ingredients.Add("Macaroni Noodles");
             Ingredients.Add("Cheese Product");
             Ingredients.Add("Pork Sausage");
+        }
+
+        public override string ToString()
+        {
+            return "MeteorMacAndCheese";
+        }
+
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
+
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                return special.ToArray();
+            }
         }
     }
 }

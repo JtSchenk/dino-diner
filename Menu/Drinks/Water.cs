@@ -9,7 +9,7 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu.Drinks
 {
-    public class Water : Drink
+    public class Water : Drink, INotifyPropertyChanged, IOrderItem
     {
         /// <summary>
         /// public variable for lemonforwater. Gets, sets, and initially false.
@@ -41,16 +41,22 @@ namespace DinoDiner.Menu.Drinks
                 {
                     Price = 0.10;
                     Calories = 0;
+                    NotifyOfPropertyChanged("Size");
+                    NotifyOfPropertyChanged("Special");
                 }
                 if (size == Size.Medium)
                 {
                     Price = 0.10;
                     Calories = 0;
+                    NotifyOfPropertyChanged("Size");
+                    NotifyOfPropertyChanged("Special");
                 }
                 if (size == Size.Large)
                 {
                     Price = 0.10;
                     Calories = 0;
+                    NotifyOfPropertyChanged("Size");
+                    NotifyOfPropertyChanged("Special");
                 }
             }
         }
@@ -74,6 +80,7 @@ namespace DinoDiner.Menu.Drinks
             if (lemonforwater)
             {
                 ingredients.Add("Lemon");
+                NotifyOfPropertyChanged("Special");
             }
         }
 
@@ -83,6 +90,7 @@ namespace DinoDiner.Menu.Drinks
         public void HoldIce()
         {
             iceforwater = false;
+            NotifyOfPropertyChanged("Special");
         }
     }
 }

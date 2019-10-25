@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class SteakosaurusBurger : Entree, INotifyPropertyChanged
+    public class SteakosaurusBurger : Entree, INotifyPropertyChanged, IOrderItem
     {
         /// <summary>
         /// Variable the sets the wholewheatbun to true.
@@ -86,7 +86,7 @@ namespace DinoDiner.Menu.Entrees
         {
             get
             {
-                List<string> special = new List<string();
+                List<string> special = new List<string>();
                 if (!wholewheatbun)
                 {
                     special.Add("Hold Whole Wheat Bun");

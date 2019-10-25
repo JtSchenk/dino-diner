@@ -9,7 +9,7 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu.Drinks
 {
-    public class JurrasicJava : Drink
+    public class JurrasicJava : Drink, INotifyPropertyChanged, IOrderItem
     {
         /// <summary>
         /// public variable ICE set to false.
@@ -46,16 +46,28 @@ namespace DinoDiner.Menu.Drinks
                 {
                     Price = 0.59;
                     Calories = 2;
+                    NotifyOfPropertyChanged("Size");
+                    NotifyOfPropertyChanged("Special");
+                    NotifyOfPropertyChanged("Price");
+                    NotifyOfPropertyChanged("Calories");
                 }
                 if (size == Size.Medium)
                 {
                     Price = 0.99;
                     Calories = 4;
+                    NotifyOfPropertyChanged("Size");
+                    NotifyOfPropertyChanged("Special");
+                    NotifyOfPropertyChanged("Price");
+                    NotifyOfPropertyChanged("Calories");
                 }
                 if (size == Size.Large)
                 {
                     Price = 1.49;
                     Calories = 8;
+                    NotifyOfPropertyChanged("Size");
+                    NotifyOfPropertyChanged("Special");
+                    NotifyOfPropertyChanged("Price");
+                    NotifyOfPropertyChanged("Calories");
                 }
             }
         }
@@ -77,6 +89,7 @@ namespace DinoDiner.Menu.Drinks
         public void LeaveRoomForCream()
         {
             RoomForCream = true;
+            NotifyOfPropertyChanged("Special");
         }
 
         /// <summary>
@@ -85,6 +98,26 @@ namespace DinoDiner.Menu.Drinks
         public void AddIce()
         {
             ICE = true;
+            NotifyOfPropertyChanged("Special");
+        }
+
+        public override string ToString()
+        {
+            return "JurassicJava";
+        }
+
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
+
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                return special.ToArray();
+            }
         }
     }
 }

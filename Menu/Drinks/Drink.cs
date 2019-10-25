@@ -76,6 +76,7 @@ namespace DinoDiner.Menu.Drinks
         public void HoldIce()
         {
             ice = false;
+            NotifyOfPropertyChanged("Special");
         }
     }
 }

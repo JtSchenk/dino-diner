@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class VelociWrap : Entree, INotifyPropertyChanged
+    public class VelociWrap : Entree, INotifyPropertyChanged, IOrderItem
     {
         /// <summary>
         /// Sets the dressing to be true.
@@ -65,7 +65,7 @@ namespace DinoDiner.Menu.Entrees
         {
             get
             {
-                List<string> special = new List<string();
+                List<string> special = new List<string>();
                 if (!dressing)
                 {
                     special.Add("Ceasar Dressing");

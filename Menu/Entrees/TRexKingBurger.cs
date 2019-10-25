@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class TRexKingBurger : Entree, INotifyPropertyChanged
+    public class TRexKingBurger : Entree, INotifyPropertyChanged, IOrderItem
     {
         /// <summary>
         /// This initilaizes the price, calories, and ingredients for the TRexKingBurger.
@@ -139,7 +139,7 @@ namespace DinoDiner.Menu.Entrees
         {
             get
             {
-                List<string> special = new List<string();
+                List<string> special = new List<string>();
                 if (!bun)
                 {
                     special.Add("Hold Whole Wheat Bun");

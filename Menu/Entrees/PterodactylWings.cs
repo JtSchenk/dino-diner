@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class PterodactylWings : Entree, INotifyPropertyChanged
+    public class PterodactylWings : Entree, INotifyPropertyChanged, IOrderItem
     {
         /// <summary>
         /// Initiliazes the PterodactlyWings to have a set number of calories, price, and ingredients.
@@ -22,7 +22,7 @@ namespace DinoDiner.Menu.Entrees
         {
             get
             {
-                List<string> special = new List<string();
+                List<string> special = new List<string>();
                 return special.ToArray();
             }
         }

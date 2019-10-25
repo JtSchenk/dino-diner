@@ -9,7 +9,7 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu.Drinks
 {
-    public class Tyrannotea : Drink
+    public class Tyrannotea : Drink, INotifyPropertyChanged, IOrderItem
     {
         /// <summary>
         /// public variable that sets sweet to false.
@@ -46,28 +46,49 @@ namespace DinoDiner.Menu.Drinks
                 {
                     Price = 0.99;
                     Calories = 8;
+                    NotifyOfPropertyChanged("Size");
+                    NotifyOfPropertyChanged("Special");
+                    NotifyOfPropertyChanged("Price");
+                    NotifyOfPropertyChanged("Calories");
                     if (sweet)
                     {
                         Calories = Calories * 2;
+                        NotifyOfPropertyChanged("Size");
+                        NotifyOfPropertyChanged("Special");
+                        NotifyOfPropertyChanged("Calories");
                     }
                 }
                 if (size == Size.Medium)
                 {
                     Price = 1.49;
                     Calories = 16;
+                    NotifyOfPropertyChanged("Size");
+                    NotifyOfPropertyChanged("Special");
+                    NotifyOfPropertyChanged("Price");
+                    NotifyOfPropertyChanged("Calories");
 
                     if (sweet)
                     {
                         Calories = Calories * 2;
+                        NotifyOfPropertyChanged("Size");
+                        NotifyOfPropertyChanged("Special");
+                        NotifyOfPropertyChanged("Calories");
                     }
                 }
                 if (size == Size.Large)
                 {
                     Price = 1.99;
                     Calories = 32;
+                    NotifyOfPropertyChanged("Size");
+                    NotifyOfPropertyChanged("Special");
+                    NotifyOfPropertyChanged("Price");
+                    NotifyOfPropertyChanged("Calories");
                     if (sweet)
                     {
                         Calories = Calories * 2;
+                        NotifyOfPropertyChanged("Size");
+                        NotifyOfPropertyChanged("Special");
+                        NotifyOfPropertyChanged("Calories");
                     }
                 }
             }
@@ -82,6 +103,7 @@ namespace DinoDiner.Menu.Drinks
             if (lemon)
             {
                 ingredients.Add("Lemon");
+                NotifyOfPropertyChanged("Special");
             }
         }
 
@@ -94,6 +116,7 @@ namespace DinoDiner.Menu.Drinks
             if (sweet)
             {
                 ingredients.Add("Cane Sugar");
+                NotifyOfPropertyChanged("Special");
             }
         }
 
@@ -107,5 +130,33 @@ namespace DinoDiner.Menu.Drinks
             ingredients.Add("Water");
             ingredients.Add("Tea");
         }
+
+        public override string ToString()
+        {
+            return "Tyrannotea";
+        }
+
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
+
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!lemon)
+                {
+                    special.Remove("Lemon");
+                }
+                if (!sweet)
+                {
+                    special.Remove("Cane Sugar");
+                }
+                return special.ToArray();
+            }
+        }
+
     }
 }

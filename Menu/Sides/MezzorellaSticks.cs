@@ -29,15 +29,27 @@ namespace DinoDiner.Menu.Sides
                         case Size.Small:
                             Price = 0.99;
                             Calories = 540;
-                            break;
+                        NotifyOfPropertyChanged("Size");
+                        NotifyOfPropertyChanged("Special");
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
+                        break;
                         case Size.Medium:
                             Price = 1.45;
                             Calories = 610;
-                            break;
+                        NotifyOfPropertyChanged("Size");
+                        NotifyOfPropertyChanged("Special");
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
+                        break;
                         case Size.Large:
                             Price = 1.95;
                             Calories = 720;
-                            break;
+                        NotifyOfPropertyChanged("Size");
+                        NotifyOfPropertyChanged("Special");
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
+                        break;
                     }
                 }
             }
@@ -52,6 +64,25 @@ namespace DinoDiner.Menu.Sides
             Ingredients.Add("Cheese Product");
             Ingredients.Add("Breading");
             Ingredients.Add("Vegetable Oil");
+        }
+
+        public override string ToString()
+        {
+            return "MezzorellaSticks";
+        }
+
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
+
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                return special.ToArray();
+            }
         }
     }
 }

@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class PrehistoricPBJ : Entree, INotifyPropertyChanged
+    public class PrehistoricPBJ : Entree, INotifyPropertyChanged, IOrderItem
     {
         /// <summary>
         /// sets the peanutButter boolean to be true
@@ -68,7 +68,7 @@ namespace DinoDiner.Menu.Entrees
         {
             get
             {
-                List<string> special = new List<string();
+                List<string> special = new List<string>();
                 if (!peanutButter)
                 {
                     special.Add("Hold Peanut Butter");

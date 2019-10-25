@@ -9,7 +9,7 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu.Drinks
 {
-    public class Sodasaurus : Drink
+    public class Sodasaurus : Drink, INotifyPropertyChanged, IOrderItem
     {
         /// <summary>
         /// Private backing variable for flavor
@@ -49,16 +49,28 @@ namespace DinoDiner.Menu.Drinks
                 {
                     Price = 1.50;
                     Calories = 112;
+                    NotifyOfPropertyChanged("Size");
+                    NotifyOfPropertyChanged("Special");
+                    NotifyOfPropertyChanged("Price");
+                    NotifyOfPropertyChanged("Calories");
                 }
                 else if (size == Size.Medium)
                 {
                     Price = 2.00;
                     Calories = 156;
+                    NotifyOfPropertyChanged("Size");
+                    NotifyOfPropertyChanged("Special");
+                    NotifyOfPropertyChanged("Price");
+                    NotifyOfPropertyChanged("Calories");
                 }
                 else if (size == Size.Large)
                 {
                     Price = 2.50;
                     Calories = 208;
+                    NotifyOfPropertyChanged("Size");
+                    NotifyOfPropertyChanged("Special");
+                    NotifyOfPropertyChanged("Price");
+                    NotifyOfPropertyChanged("Calories");
                 }
             }
         }
@@ -74,6 +86,26 @@ namespace DinoDiner.Menu.Drinks
             ingredients.Add("Natural Flavors");
             ingredients.Add("Cane Sugar");
         }
-       
+
+        public override string ToString()
+        {
+            return "Sodasaurus";
+        }
+
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
+
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                return special.ToArray();
+            }
+        }
     }
+
+}
 }
