@@ -24,5 +24,15 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+
+        void OnAddPrehistoricPBJ(object sender, RoutedEvent Args)
+        {
+            /*if (DataContext is Order order){
+             Prehistoric PBJ pbj = new PrehistoricPBG();
+             order.Add(pbj);
+             NavigationService.Navigate(new CustomizePrehistoricPBJ(pbj));
+            
+            */
+        }
     }
 }
