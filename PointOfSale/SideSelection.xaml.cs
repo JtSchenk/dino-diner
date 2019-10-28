@@ -39,7 +39,7 @@ namespace PointOfSale
             }
         }
 
-        private void OnChangeSize(object sender, RoutedEventsArgs args)
+        private void OnChangeSize(object sender, RoutedEventArgs args)
         {
             if (sender is FrameworkElement element)
             {
